@@ -1,0 +1,39 @@
+[versions]
+agp = "8.6.0-alpha07"
+constraintlayout = "2.1.4"
+coreKtx = "1.12.0"
+junit = "4.13.2"
+junitJupiter = "5.10.0"
+junitVersion = "1.2.1"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+mockitoCore = "5.5.0"
+mockitoJunitJupiter = "5.5.12"
+mockitoKotlin = "5.0.0"
+orgEclipsePahoAndroidService = "1.1.1"
+orgEclipsePahoClientMqttv3 = "1.2.5"
+playServicesLocation = "21.3.0"
+lifecycleProcess = "2.8.7"
+
+[libraries]
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitJupiter" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+mockito-android = { module = "org.mockito:mockito-android", version.ref = "mockitoCore" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockito-junit-jupiter = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockitoJunitJupiter" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+org-eclipse-paho-android-service = { module = "org.eclipse.paho:org.eclipse.paho.android.service", version.ref = "orgEclipsePahoAndroidService" }
+org-eclipse-paho-client-mqttv3 = { module = "org.eclipse.paho:org.eclipse.paho.client.mqttv3", version.ref = "orgEclipsePahoClientMqttv3" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycleProcess" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

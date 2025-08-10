@@ -1,0 +1,32 @@
+<configuration>
+    <property name="HOME_LOG" value="./edge-server/logs/app.log"/>
+
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Rolling File Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${HOME_LOG}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Rotate logs daily -->
+            <fileNamePattern>./edge-server/logs/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>1</maxHistory> <!-- Keep only the last 1 day of logs -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d %p %c{1} [%t] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Specific Logger to suppress HikariCP DEBUG logs -->
+    <logger name="com.zaxxer.hikari" level="INFO"/>
+
+    <!-- Root Logger -->
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

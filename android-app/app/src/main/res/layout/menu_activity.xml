@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".activities.MenuActivity">
+
+    <!-- Back Button (Top Left) -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="goBack"
+        android:text="@string/back_button"
+        android:backgroundTint="@color/white"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Exit Button (Top Right) -->
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:onClick="showConfirmationDialogue"
+        android:text="@string/exit_app_button"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Divider under buttons -->
+    <View
+        android:id="@+id/top_buttons_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_button" />
+
+    <!-- Server Connection Title -->
+    <TextView
+        android:id="@+id/server_connection_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/server_connection"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_buttons_divider" />
+
+    <!-- Server IP Input -->
+    <EditText
+        android:id="@+id/server_ip_edit_text"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/edge_ip_text_view"
+        android:inputType="text"
+        android:maxWidth="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/server_connection_label" />
+
+    <!-- Device ID Input -->
+    <EditText
+        android:id="@+id/deviceID_edit_text"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/device_id_hint"
+        android:maxWidth="180dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/server_ip_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/server_connection_label" />
+
+    <!-- Server Port Input -->
+    <EditText
+        android:id="@+id/server_port_edit_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/edge_port_text_view"
+        android:inputType="number"
+        android:maxWidth="150dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/server_ip_edit_text" />
+
+    <!-- Start MQTT Button -->
+    <Button
+        android:id="@+id/start_mqtt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="startMQTTConnection"
+        android:text="@string/start_mqtt_service"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/server_port_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/deviceID_edit_text" />
+
+    <!-- Stop MQTT Button -->
+    <Button
+        android:id="@+id/stop_mqtt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="60dp"
+        android:onClick="stopMQTTTransmission"
+        android:text="@string/stop_transmission"
+        android:textColor="@color/white"
+        android:backgroundTint="#2C2C2C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_mqtt_button" />
+
+    <!-- GPS Configuration Title -->
+    <TextView
+        android:id="@+id/gps_config_title"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/gps_configuration"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_mqtt_button" />
+
+    <!-- Transmission Duration Input -->
+    <TextView
+        android:id="@+id/duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/transmission_duration_seconds"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_mqtt_button" />
+
+    <EditText
+        android:id="@+id/duration_edit_text"
+        android:layout_width="135dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:hint="@string/enter_seconds"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/duration_label"
+        app:layout_constraintTop_toBottomOf="@id/start_mqtt_button" />
+
+    <!-- GPS Mode Container -->
+    <LinearLayout
+        android:id="@+id/gps_mode_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gps_config_title">
+
+        <!-- GPS Mode Switch -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/gps_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:thumbTint="@color/switch_thumb"
+            android:trackTint="@color/switch_track"/>
+
+        <!-- GPS Mode Label -->
+        <TextView
+            android:id="@+id/gps_mode_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

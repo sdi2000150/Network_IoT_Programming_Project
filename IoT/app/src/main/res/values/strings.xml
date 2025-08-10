@@ -1,0 +1,58 @@
+<resources>
+    <string name="icon_description">App Icon</string>
+
+    <string name="app_name">IoT</string>
+    <string name="hello_android">Hello Android!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="menu_button_text">Menu</string>
+    <string name="smoke_sensor_text">Smoke Sensor</string>
+    <string name="gas_sensor_text">Gas Sensor</string>
+    <string name="temperature_sensor_text">Temperature Sensor</string>
+    <string name="ultraviolet_radiation_sensor_text">Ultraviolet Radiation Sensor</string>
+
+    <!-- string resources for menu -->
+    <string name="server_connection">MQTT Broker Connection</string>
+    <string name="edge_ip_text_view">Server IP</string>
+    <string name="edge_port_text_view">Server Port</string>
+    <string name="start_mqtt_service">Start Transmission</string>
+    <string name="menu_activity_label">Menu</string>
+    <string name="back_button">Back</string>
+
+    <string name="gps_configuration_title">GPS Configuration</string>
+    <string name="auto_gps_choice">Auto</string>
+    <string name="manual_gps_choice">Manual</string>
+    <string name="add_new_sensor_button">Add Sensor</string>
+    <string name="exit_app_button">Exit App</string>
+
+    <!-- string resources for sensor activity -->
+    <string name="sensor_text">Sensor Tab</string>
+
+    <!--string resources for adding new sensor -->
+    <string name="new_sensor_text_view">New Sensor</string>
+    <string-array name="sensor_types">
+        <item>Temperature</item>
+        <item>Gas</item>
+        <item>Smoke</item>
+        <item>UV</item>
+    </string-array>
+    <string name="min_value_text_view">Minimum Value</string>
+    <string name="max_value_text_view">Maximum Value</string>
+    <string name="min_value_hint">0</string>
+    <string name="max_value_hint">50</string>
+
+    <!--Strings resources for Sensor Fragment -->
+    <string name="smoke_frag_title"> <b>Αισθητήρας Καπνού \n(Smoke Sensor)</b> </string>
+    <string name="gas_frag_title"> <b>Αισθητήρας Αερίων \n(Gas Sensor)</b> </string>
+    <string name="temp_frag_title"> <b>Αισθητήρας Θερμοκρασίας \n(Temperature Sensor)</b> </string>
+    <string name="UV_frag_title"> <b>Αισθητήρας Υπεριώδους Ακτινοβολίας \n (UV Sensor)</b> </string>
+    <string name="smoke_frag_desc">Ο αισθητήρας μετρά το Optical Density (OD) της ατμόσφαιρας.\nΕύρος τιμών: [0.0 – 0.25]. Κατώφλι: > 0.14 OD.</string>
+    <string name="gas_frag_desc">Ο αισθητήρας μετράει την περιεκτικότητα σε εύφλεκτα υλικά.\nΕύρος τιμών: [0.00 – 100.00%]. Κατώφλι: > 9.15%. </string>
+    <string name="temp_frag_desc">Ο αισθητήρας μετρά την θερμοκρασία του περιβάλλοντος.\nΕύρος τιμών: [-5°C, 80°C]. Κατώφλι: > 50°C.</string>
+    <string name="UV_frag_desc">Ο αισθητήρας μετρά την ένταση της υπεριώδους ακτινοβολίας με τον δείκτη UV.\nΕύρος τιμών: [0, 11]. Κατώφλι: > 6.</string>
+    <string name="sensor_slider_label">Τωρινή Τιμή: %1$.2f </string>"
+    <string name="sensor_active">Ενεργοποιημένος (On) </string>
+    <string name="sensor_inactive">Απενεργοποιημένος (Off) </string>
+    <string name="device_id_hint">Enter Device ID (e.g. IoT1)</string>
+    <string name="sensors_available">Sensors Available</string>
+</resources>

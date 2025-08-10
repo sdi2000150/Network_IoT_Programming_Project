@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Live IoT-User Map</title>
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <!-- Styles: included Leaflet CSS, Google Fonts, and custom CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Scripts: included Leaflet JS, and custom JavaScript file -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<!-- HTML page layout body -->
+<header>
+    <h1>Live IoT-User Map</h1>
+</header>
+<div class="container">
+    <aside>
+        <h4>Live details about the IoT and User devices will appear here and on the map.
+            <p><br>Each IoT is a stationary Android device with several sensors available.</p>
+            <p><br>Each User is a mobile Android device (user), which receives alerts when needed according to its location.</p>
+        </h4>
+
+        <h4>Number of devices at the moment:
+            <p><br>IoT Devices: <span id="iot-count">0</span></p>
+            <p><br>User Devices: <span id="user-count">0</span></p>
+        </h4>
+
+        <div id="severity-info" style="background-color: #ffe6e6; padding: 10px; margin-top: 20px; border: 1px solid red; border-radius: 5px; display: none;">
+            <h3 style="color: red;">Severity Alerts</h3>
+            <p id="severity-text">No severe events at the moment.</p>
+        </div>
+    </aside>
+    <div id="map"></div>
+</div>
+<footer>
+    <p>&copy; 2025 Network IoT Programming Project, DIT UoA</p>
+</footer>
+</body>
+</html>

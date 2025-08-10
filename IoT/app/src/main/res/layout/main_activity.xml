@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Extra utilities, a clock for example -->
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="16dp"/>
+
+    <!-- Menu Button-->
+    <Button
+        android:id="@+id/menu_button"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/menu_button_text"
+        android:onClick="startMenuActivity"/>
+
+    <!-- Title for the sensors container -->
+    <TextView
+        android:id="@+id/sensors_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textClock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Sensors Available"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <!-- Sensors Grid Container -->
+    <GridLayout
+        android:id="@+id/sensors_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_button"
+        android:layout_marginTop="110dp"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:rowCount="2">
+
+        <!-- Smoke Sensor Button -->
+        <Button
+            android:id="@+id/smoke_sensor_button"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/lightblue"
+            android:text="@string/smoke_sensor_text"
+            android:textSize="16sp"
+            android:onClick="startSensorActivity"/>
+
+        <!-- Gas Sensor Button -->
+        <Button
+            android:id="@+id/gas_sensor_button"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/lightgreen"
+            android:text="@string/gas_sensor_text"
+            android:textSize="16sp"
+            android:onClick="startSensorActivity"/>
+
+        <!-- Temperature Sensor Button -->
+        <Button
+            android:id="@+id/temperature_sensor_button"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/lightred"
+            android:text="@string/temperature_sensor_text"
+            android:textSize="16sp"
+            android:onClick="startSensorActivity"/>
+
+        <!-- Ultraviolet Radiation Sensor Button -->
+        <Button
+            android:id="@+id/ultraviolet_radiation_sensor_button"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/lightpurple"
+            android:text="@string/ultraviolet_radiation_sensor_text"
+            android:textSize="16sp"
+            android:onClick="startSensorActivity"/>
+
+    </GridLayout>
+
+</RelativeLayout>

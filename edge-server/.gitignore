@@ -1,0 +1,20 @@
+# Ignore compiled class files
+*.class
+
+# Ignore maven and gradle generated folders
+target/
+build/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Other IDE specific files
+*.swp
+*.swo
+
+# Ignore logs, temp files, and OS-specific files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
